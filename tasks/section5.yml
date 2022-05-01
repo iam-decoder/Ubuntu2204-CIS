@@ -4,7 +4,7 @@
       name: "{{ cron_service[ansible_os_family] }}"
       enabled: true
   when:
-      - ubuntu1804cis_rule_5_1_1
+      - ubuntu2204cis_rule_5_1_1
   tags:
       - level1
       - scored
@@ -19,7 +19,7 @@
       group: root
       mode: 0600
   when:
-      - ubuntu1804cis_rule_5_1_2
+      - ubuntu2204cis_rule_5_1_2
   tags:
       - level1
       - scored
@@ -35,7 +35,7 @@
       group: root
       mode: 0700
   when:
-      - ubuntu1804cis_rule_5_1_3
+      - ubuntu2204cis_rule_5_1_3
   tags:
       - level1
       - scored
@@ -51,7 +51,7 @@
       group: root
       mode: 0700
   when:
-      - ubuntu1804cis_rule_5_1_4
+      - ubuntu2204cis_rule_5_1_4
   tags:
       - level1
       - scored
@@ -67,7 +67,7 @@
       group: root
       mode: 0700
   when:
-      - ubuntu1804cis_rule_5_1_5
+      - ubuntu2204cis_rule_5_1_5
   tags:
       - level1
       - scored
@@ -83,7 +83,7 @@
       group: root
       mode: 0700
   when:
-      - ubuntu1804cis_rule_5_1_6
+      - ubuntu2204cis_rule_5_1_6
   tags:
       - level1
       - scored
@@ -99,7 +99,7 @@
       group: root
       mode: 0700
   when:
-      - ubuntu1804cis_rule_5_1_7
+      - ubuntu2204cis_rule_5_1_7
   tags:
       - level1
       - scored
@@ -135,7 +135,7 @@
           group: root
           mode: 0600
   when:
-      - ubuntu1804cis_rule_5_1_8
+      - ubuntu2204cis_rule_5_1_8
   tags:
       - level1
       - scored
@@ -151,7 +151,7 @@
       group: root
       mode: 0600
   when:
-      - ubuntu1804cis_rule_5_2_1
+      - ubuntu2204cis_rule_5_2_1
   tags:
       - level1
       - scored
@@ -176,7 +176,7 @@
             mode: 0600
         with_items: "{{ ssh_private_host_keys.files }}"
   when:
-      - ubuntu1804cis_rule_5_2_2
+      - ubuntu2204cis_rule_5_2_2
   tags:
       - level1
       - scored
@@ -201,7 +201,7 @@
             mode: 0644
         with_items: "{{ ssh_public_host_keys.files }}"
   when:
-      - ubuntu1804cis_rule_5_2_3
+      - ubuntu2204cis_rule_5_2_3
   tags:
       - level1
       - scored
@@ -216,7 +216,7 @@
       regexp: '^Protocol'
       line: 'Protocol 2'
   when:
-      - ubuntu1804cis_rule_5_2_4
+      - ubuntu2204cis_rule_5_2_4
   tags:
       - level1
       - scored
@@ -231,7 +231,7 @@
       regexp: '^LogLevel'
       line: 'LogLevel INFO'
   when:
-      - ubuntu1804cis_rule_5_2_5
+      - ubuntu2204cis_rule_5_2_5
   tags:
       - level1
       - scored
@@ -246,7 +246,7 @@
       regexp: '^X11Forwarding'
       line: 'X11Forwarding no'
   when:
-      - ubuntu1804cis_rule_5_2_6
+      - ubuntu2204cis_rule_5_2_6
   tags:
       - level1
       - scored
@@ -261,7 +261,7 @@
       regexp: '^(#)?MaxAuthTries \d'
       line: 'MaxAuthTries 4'
   when:
-      - ubuntu1804cis_rule_5_2_7
+      - ubuntu2204cis_rule_5_2_7
   tags:
       - level1
       - scored
@@ -276,7 +276,7 @@
       regexp: '^IgnoreRhosts'
       line: 'IgnoreRhosts yes'
   when:
-      - ubuntu1804cis_rule_5_2_8
+      - ubuntu2204cis_rule_5_2_8
   tags:
       - level1
       - scored
@@ -291,7 +291,7 @@
       regexp: '^HostbasedAuthentication'
       line: 'HostbasedAuthentication no'
   when:
-      - ubuntu1804cis_rule_5_2_9
+      - ubuntu2204cis_rule_5_2_9
   tags:
       - level1
       - scored
@@ -306,7 +306,7 @@
       regexp: '^PermitRootLogin'
       line: 'PermitRootLogin no'
   when:
-      - ubuntu1804cis_rule_5_2_10
+      - ubuntu2204cis_rule_5_2_10
   tags:
       - level1
       - scored
@@ -321,7 +321,7 @@
       regexp: '^PermitEmptyPasswords'
       line: 'PermitEmptyPasswords no'
   when:
-      - ubuntu1804cis_rule_5_2_11
+      - ubuntu2204cis_rule_5_2_11
   tags:
       - level1
       - scored
@@ -336,7 +336,7 @@
       regexp: '^PermitUserEnvironment'
       line: 'PermitUserEnvironment no'
   when:
-      - ubuntu1804cis_rule_5_2_12
+      - ubuntu2204cis_rule_5_2_12
   tags:
       - level1
       - scored
@@ -349,9 +349,9 @@
       state: present
       dest: /etc/ssh/sshd_config
       regexp: '^Ciphers'
-      line: "Ciphers {{ ubuntu1804cis_sshd['ciphers'] }}"
+      line: "Ciphers {{ ubuntu2204cis_sshd['ciphers'] }}"
   when:
-      - ubuntu1804cis_rule_5_2_13
+      - ubuntu2204cis_rule_5_2_13
   tags:
       - level1
       - scored
@@ -364,9 +364,9 @@
       state: present
       dest: /etc/ssh/sshd_config
       regexp: '^MACs'
-      line: "MACs {{ ubuntu1804cis_sshd['macs'] }}"
+      line: "MACs {{ ubuntu2204cis_sshd['macs'] }}"
   when:
-      - ubuntu1804cis_rule_5_2_14
+      - ubuntu2204cis_rule_5_2_14
   tags:
       - level1
       - scored
@@ -379,9 +379,9 @@
       state: present
       dest: /etc/ssh/sshd_config
       regexp: '^KexAlgorithms'
-      line: "KexAlgorithms {{ ubuntu1804cis_sshd['kexalgorithms'] }}"
+      line: "KexAlgorithms {{ ubuntu2204cis_sshd['kexalgorithms'] }}"
   when:
-      - ubuntu1804cis_rule_5_2_15
+      - ubuntu2204cis_rule_5_2_15
   tags:
       - level1
       - scored
@@ -396,16 +396,16 @@
             state: present
             dest: /etc/ssh/sshd_config
             regexp: '^ClientAliveInterval'
-            line: "ClientAliveInterval {{ ubuntu1804cis_sshd['clientaliveinterval'] }}"
+            line: "ClientAliveInterval {{ ubuntu2204cis_sshd['clientaliveinterval'] }}"
 
       - name: "SCORED | 5.2.16 | PATCH | Ensure SSH ClientAliveCountMax set to <= 3"
         lineinfile:
             state: present
             dest: /etc/ssh/sshd_config
             regexp: '^ClientAliveCountMax'
-            line: "ClientAliveCountMax {{ ubuntu1804cis_sshd['clientalivecountmax'] }}"
+            line: "ClientAliveCountMax {{ ubuntu2204cis_sshd['clientalivecountmax'] }}"
   when:
-      - ubuntu1804cis_rule_5_2_16
+      - ubuntu2204cis_rule_5_2_16
   tags:
       - level1
       - scored
@@ -420,7 +420,7 @@
       regexp: '^LoginGraceTime'
       line: "LoginGraceTime 60"
   when:
-      - ubuntu1804cis_rule_5_2_17
+      - ubuntu2204cis_rule_5_2_17
   tags:
       - level1
       - scored
@@ -435,38 +435,38 @@
             state: present
             dest: /etc/ssh/sshd_config
             regexp: '^AllowUsers'
-            line: "AllowUsers {{ ubuntu1804cis_sshd['allowusers'] }}"
+            line: "AllowUsers {{ ubuntu2204cis_sshd['allowusers'] }}"
         when:
-            - "ubuntu1804cis_sshd['allowusers']|default('')"
+            - "ubuntu2204cis_sshd['allowusers']|default('')"
 
       - name: "SCORED | 5.2.18 | PATCH | Ensure SSH access is limited | allowgroups"
         lineinfile:
             state: present
             dest: /etc/ssh/sshd_config
             regexp: '^AllowGroups'
-            line: "AllowGroups {{ ubuntu1804cis_sshd['allowgroups'] }}"
+            line: "AllowGroups {{ ubuntu2204cis_sshd['allowgroups'] }}"
         when:
-            - "ubuntu1804cis_sshd['allowgroups']|default('')"
+            - "ubuntu2204cis_sshd['allowgroups']|default('')"
 
       - name: "SCORED | 5.2.18 | PATCH | Ensure SSH access is limited | denyusers"
         lineinfile:
             state: present
             dest: /etc/ssh/sshd_config
             regexp: '^DenyUsers'
-            line: "DenyUsers {{ ubuntu1804cis_sshd['denyusers'] }}"
+            line: "DenyUsers {{ ubuntu2204cis_sshd['denyusers'] }}"
         when:
-            - "ubuntu1804cis_sshd['denyusers']|default('')"
+            - "ubuntu2204cis_sshd['denyusers']|default('')"
 
       - name: "SCORED | 5.2.18 | PATCH | Ensure SSH access is limited | denygroups"
         lineinfile:
             state: present
             dest: /etc/ssh/sshd_config
             regexp: '^DenyGroups'
-            line: "DenyGroups {{ ubuntu1804cis_sshd['denygroups'] }}"
+            line: "DenyGroups {{ ubuntu2204cis_sshd['denygroups'] }}"
         when:
-            - "ubuntu1804cis_sshd['denygroups']|default('')"
+            - "ubuntu2204cis_sshd['denygroups']|default('')"
   when:
-      - ubuntu1804cis_rule_5_2_18
+      - ubuntu2204cis_rule_5_2_18
   tags:
       - level1
       - scored
@@ -481,7 +481,7 @@
       regexp: '^Banner'
       line: 'Banner /etc/issue.net'
   when:
-      - ubuntu1804cis_rule_5_2_19
+      - ubuntu2204cis_rule_5_2_19
   tags:
       - level1
       - scored
@@ -496,7 +496,7 @@
       regexp: '^UsePAM'
       line: 'UsePAM yes'
   when:
-      - ubuntu1804cis_rule_5_2_20
+      - ubuntu2204cis_rule_5_2_20
   tags:
       - level1
       - scored
@@ -511,7 +511,7 @@
       regexp: '^AllowTcpForwarding'
       line: 'AllowTcpForwarding no'
   when:
-      - ubuntu1804cis_rule_5_2_21
+      - ubuntu2204cis_rule_5_2_21
   tags:
       - level2
       - scored
@@ -526,7 +526,7 @@
       regexp: '^MaxStartups'
       line: 'MaxStartups 10:30:60'
   when:
-      - ubuntu1804cis_rule_5_2_22
+      - ubuntu2204cis_rule_5_2_22
   tags:
       - level1
       - scored
@@ -543,7 +543,7 @@
   notify:
       - restart sshd
   when:
-      - ubuntu1804cis_rule_5_2_23
+      - ubuntu2204cis_rule_5_2_23
   tags:
       - level1
       - scored
@@ -567,9 +567,9 @@
             regexp: '^{{ item.key }}'
             line: '{{ item.key }} = {{ item.value }}'
         with_items:
-            - "{{ ubuntu1804cis_pwquality }}"
+            - "{{ ubuntu2204cis_pwquality }}"
   when:
-      - ubuntu1804cis_rule_5_3_1
+      - ubuntu2204cis_rule_5_3_1
   tags:
       - level1
       - scored
@@ -588,7 +588,7 @@
             dest: /etc/pam.d/common-auth
             line: 'auth required pam_tally2.so onerr=fail audit silent deny=5 unlock_time=900'
   when:
-      - ubuntu1804cis_rule_5_3_2
+      - ubuntu2204cis_rule_5_3_2
   tags:
       - level1
       - scored
@@ -598,9 +598,9 @@
 - name: "SCORED | 5.3.3 | PATCH | Ensure password reuse is limited"
   lineinfile:
       dest: /etc/pam.d/common-password
-      line: "password required pam_pwhistory.so remember={{ ubuntu1804cis_pass['history'] }}"
+      line: "password required pam_pwhistory.so remember={{ ubuntu2204cis_pass['history'] }}"
   when:
-      - ubuntu1804cis_rule_5_3_3
+      - ubuntu2204cis_rule_5_3_3
   tags:
       - level1
       - scored
@@ -612,7 +612,7 @@
   changed_when: false
   failed_when: false
   when:
-      - ubuntu1804cis_rule_5_3_4
+      - ubuntu2204cis_rule_5_3_4
   tags:
       - level1
       - scored
@@ -624,9 +624,9 @@
       state: present
       dest: /etc/login.defs
       regexp: '^PASS_MAX_DAYS'
-      line: "PASS_MAX_DAYS {{ ubuntu1804cis_pass['max_days'] }}"
+      line: "PASS_MAX_DAYS {{ ubuntu2204cis_pass['max_days'] }}"
   when:
-      - ubuntu1804cis_rule_5_4_1_1
+      - ubuntu2204cis_rule_5_4_1_1
   tags:
       - level1
       - scored
@@ -638,9 +638,9 @@
       state: present
       dest: /etc/login.defs
       regexp: '^PASS_MIN_DAYS'
-      line: "PASS_MIN_DAYS {{ ubuntu1804cis_pass['min_days'] }}"
+      line: "PASS_MIN_DAYS {{ ubuntu2204cis_pass['min_days'] }}"
   when:
-      - ubuntu1804cis_rule_5_4_1_2
+      - ubuntu2204cis_rule_5_4_1_2
   tags:
       - level1
       - scored
@@ -652,9 +652,9 @@
       state: present
       dest: /etc/login.defs
       regexp: '^PASS_WARN_AGE'
-      line: "PASS_WARN_AGE {{ ubuntu1804cis_pass['warn_age'] }}"
+      line: "PASS_WARN_AGE {{ ubuntu2204cis_pass['warn_age'] }}"
   when:
-      - ubuntu1804cis_rule_5_4_1_3
+      - ubuntu2204cis_rule_5_4_1_3
   tags:
       - level1
       - scored
@@ -666,9 +666,9 @@
     state: present
     dest: /etc/default/useradd
     regexp: '^INACTIVE'
-    line: "INACTIVE={{ ubuntu1804cis_pass['inactive'] }}"
+    line: "INACTIVE={{ ubuntu2204cis_pass['inactive'] }}"
   when:
-      - ubuntu1804cis_rule_5_4_1_4
+      - ubuntu2204cis_rule_5_4_1_4
   tags:
       - level1
       - scored
@@ -683,7 +683,7 @@
             password_lock: yes"
         loop: "{{ users_password_change_date_in_future.stdout_lines }}"
         when:
-            - ubuntu1804cis_password_change_date_in_future_action == 'lock'
+            - ubuntu2204cis_password_change_date_in_future_action == 'lock'
 
       - name: "SCORED | 5.4.1.5 | PATCH | Ensure all users last password change date is in the past| expire users"
         user:
@@ -691,9 +691,9 @@
             expires: 1422403387
         loop: "{{ users_password_change_date_in_future.stdout_lines }}"
         when:
-            - ubuntu1804cis_password_change_date_in_future_action == 'expire'
+            - ubuntu2204cis_password_change_date_in_future_action == 'expire'
   when:
-      - ubuntu1804cis_rule_5_4_1_5
+      - ubuntu2204cis_rule_5_4_1_5
       - users_password_change_date_in_future.stdout_lines | length > 0
   tags:
       - level1
@@ -714,7 +714,7 @@
     done
   changed_when: false
   when:
-      - ubuntu1804cis_rule_5_4_2
+      - ubuntu2204cis_rule_5_4_2
       - system_accounts_non_login_1.stdout
       - system_accounts_non_login_2.stdout
   tags:
@@ -728,7 +728,7 @@
   changed_when: false
   failed_when: false
   when:
-      - ubuntu1804cis_rule_5_4_3
+      - ubuntu2204cis_rule_5_4_3
   tags:
       - level1
       - patch
@@ -761,7 +761,7 @@
         regexp: '^umask '
         line: 'umask 027'
   when:
-      - ubuntu1804cis_rule_5_4_4
+      - ubuntu2204cis_rule_5_4_4
   tags:
       - level1
       - patch
@@ -776,7 +776,7 @@
         dest: /etc/bash.bashrc
         create: true
         regexp: '^TMOUT='
-        line: "TMOUT={{ ubuntu1804cis_shell_timeout }}"
+        line: "TMOUT={{ ubuntu2204cis_shell_timeout }}"
 
     - name: "SCORED | 5.4.5 | PATCH | Ensure default user shell timeout is 900 seconds or less - /etc/profile"
       lineinfile:
@@ -784,7 +784,7 @@
         dest: /etc/profile
         create: true
         regexp: '^TMOUT='
-        line: "TMOUT={{ ubuntu1804cis_shell_timeout }}"
+        line: "TMOUT={{ ubuntu2204cis_shell_timeout }}"
 
     - name: "SCORED | 5.4.5 | PATCH | Ensure default user shell timeout is 900 seconds or less - /etc/profile.d/99-tmout.sh"
       lineinfile:
@@ -792,9 +792,9 @@
         dest: /etc/profile.d/99-tmout.sh
         create: true
         regexp: '^TMOUT='
-        line: "TMOUT={{ ubuntu1804cis_shell_timeout }}"
+        line: "TMOUT={{ ubuntu2204cis_shell_timeout }}"
   when:
-    - ubuntu1804cis_rule_5_4_5
+    - ubuntu2204cis_rule_5_4_5
   tags:
     - level1
     - patch
@@ -805,7 +805,7 @@
   command: /bin/true
   changed_when: false
   when:
-      - ubuntu1804cis_rule_5_5
+      - ubuntu2204cis_rule_5_5
   tags:
       - level1
       - patch
@@ -820,7 +820,7 @@
       regexp: '^(#)?auth\s+required\s+pam_wheel\.so'
       line: "auth           required        pam_wheel.so use_uid"
   when:
-      - ubuntu1804cis_rule_5_6
+      - ubuntu2204cis_rule_5_6
   tags:
       - level1
       - patch
@@ -832,7 +832,7 @@
       name: root
       groups: sudo
   when:
-      - ubuntu1804cis_rule_5_6
+      - ubuntu2204cis_rule_5_6
   tags:
       - level1
       - patch

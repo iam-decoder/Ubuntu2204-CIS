@@ -1,8 +1,8 @@
 ---
 galaxy_info:
   author: "florianutz"
-  role_name: ubuntu2004_cis
-  description: "Ansible role to apply Ubuntu 18.04 CIS Baseline"
+  role_name: ubuntu2204_cis
+  description: "Ansible role to apply Ubuntu 22.04 CIS Baseline"
   company: "none"
   license: MIT
   min_ansible_version: 2.6

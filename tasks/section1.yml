@@ -10,7 +10,7 @@
       mode: 0644
       create: true
   when:
-      - ubuntu1804cis_rule_1_1_1_1
+      - ubuntu2204cis_rule_1_1_1_1
   tags:
       - level1
       - scored
@@ -24,8 +24,8 @@
       name: cramfs
       state: absent
   when:
-      - ubuntu1804cis_rule_1_1_1_1
-      - not ubuntu1804cis_skip_for_travis
+      - ubuntu2204cis_rule_1_1_1_1
+      - not ubuntu2204cis_skip_for_travis
   tags:
       - level1
       - scored
@@ -42,7 +42,7 @@
       state: present
       create: true
   when:
-      - ubuntu1804cis_rule_1_1_1_2
+      - ubuntu2204cis_rule_1_1_1_2
   tags:
       - level1
       - scored
@@ -56,8 +56,8 @@
       name: freevxfs
       state: absent
   when:
-      - ubuntu1804cis_rule_1_1_1_2
-      - not ubuntu1804cis_skip_for_travis
+      - ubuntu2204cis_rule_1_1_1_2
+      - not ubuntu2204cis_skip_for_travis
   tags:
       - level1
       - scored
@@ -74,7 +74,7 @@
       state: present
       create: true
   when:
-      - ubuntu1804cis_rule_1_1_1_3
+      - ubuntu2204cis_rule_1_1_1_3
   tags:
       - level1
       - scored
@@ -88,8 +88,8 @@
       name: jffs2
       state: absent
   when:
-      - ubuntu1804cis_rule_1_1_1_3
-      - not ubuntu1804cis_skip_for_travis
+      - ubuntu2204cis_rule_1_1_1_3
+      - not ubuntu2204cis_skip_for_travis
   tags:
       - level1
       - scored
@@ -106,7 +106,7 @@
       state: present
       create: true
   when:
-      - ubuntu1804cis_rule_1_1_1_4
+      - ubuntu2204cis_rule_1_1_1_4
   tags:
       - level1
       - scored
@@ -120,8 +120,8 @@
       name: hfs
       state: absent
   when:
-      - ubuntu1804cis_rule_1_1_1_4
-      - not ubuntu1804cis_skip_for_travis
+      - ubuntu2204cis_rule_1_1_1_4
+      - not ubuntu2204cis_skip_for_travis
   tags:
       - level1
       - scored
@@ -138,7 +138,7 @@
       state: present
       create: true
   when:
-      - ubuntu1804cis_rule_1_1_1_5
+      - ubuntu2204cis_rule_1_1_1_5
   tags:
       - level1
       - scored
@@ -152,8 +152,8 @@
       name: hfsplus
       state: absent
   when:
-      - ubuntu1804cis_rule_1_1_1_5
-      - not ubuntu1804cis_skip_for_travis
+      - ubuntu2204cis_rule_1_1_1_5
+      - not ubuntu2204cis_skip_for_travis
   tags:
       - level1
       - scored
@@ -170,7 +170,7 @@
       state: present
       create: true
   when:
-      - ubuntu1804cis_rule_1_1_1_6
+      - ubuntu2204cis_rule_1_1_1_6
   tags:
       - level1
       - scored
@@ -184,8 +184,8 @@
       name: squashfs
       state: absent
   when:
-      - ubuntu1804cis_rule_1_1_1_6
-      - not ubuntu1804cis_skip_for_travis
+      - ubuntu2204cis_rule_1_1_1_6
+      - not ubuntu2204cis_skip_for_travis
   tags:
       - level1
       - scored
@@ -202,7 +202,7 @@
       state: present
       create: true
   when:
-      - ubuntu1804cis_rule_1_1_1_7
+      - ubuntu2204cis_rule_1_1_1_7
   tags:
       - level1
       - scored
@@ -216,8 +216,8 @@
       name: udf
       state: absent
   when:
-      - ubuntu1804cis_rule_1_1_1_7
-      - not ubuntu1804cis_skip_for_travis
+      - ubuntu2204cis_rule_1_1_1_7
+      - not ubuntu2204cis_skip_for_travis
   tags:
       - level1
       - scored
@@ -234,7 +234,7 @@
       state: present
       create: true
   when:
-      - ubuntu1804cis_rule_1_1_1_8
+      - ubuntu2204cis_rule_1_1_1_8
   tags:
       - level2
       - notscored
@@ -248,8 +248,8 @@
       name: vfat
       state: absent
   when:
-      - ubuntu1804cis_rule_1_1_1_8
-      - not ubuntu1804cis_skip_for_travis
+      - ubuntu2204cis_rule_1_1_1_8
+      - not ubuntu2204cis_skip_for_travis
   tags:
       - level2
       - notscored
@@ -270,8 +270,8 @@
   notify:
       - systemd restart tmp.mount
   when:
-      - ubuntu1804cis_rule_1_1_2
-      - not ubuntu1804cis_skip_for_travis
+      - ubuntu2204cis_rule_1_1_2
+      - not ubuntu2204cis_skip_for_travis
   tags:
       - level2
       - scored
@@ -286,8 +286,8 @@
       masked: no
       state: started
   when:
-      - ubuntu1804cis_rule_1_1_2
-      - not ubuntu1804cis_skip_for_travis
+      - ubuntu2204cis_rule_1_1_2
+      - not ubuntu2204cis_skip_for_travis
   tags:
       - level2
       - scored
@@ -309,8 +309,8 @@
   notify:
       - systemd restart tmp.mount
   when:
-      - ubuntu1804cis_rule_1_1_3
-      - ubuntu1804cis_rule_1_1_4
+      - ubuntu2204cis_rule_1_1_3
+      - ubuntu2204cis_rule_1_1_4
   tags:
       - level1
       - scored
@@ -332,7 +332,7 @@
   notify:
       - systemd restart tmp.mount
   when:
-      - ubuntu1804cis_rule_1_1_5
+      - ubuntu2204cis_rule_1_1_5
   tags:
       - level1
       - scored
@@ -345,7 +345,7 @@
   changed_when: false
   failed_when: false
   when:
-      - ubuntu1804cis_rule_1_1_6
+      - ubuntu2204cis_rule_1_1_6
   tags:
       - level2
       - scored
@@ -359,7 +359,7 @@
   changed_when: false
   failed_when: false
   when:
-      - ubuntu1804cis_rule_1_1_7
+      - ubuntu2204cis_rule_1_1_7
   tags:
       - level2
       - scored
@@ -373,15 +373,15 @@
       SCORED | 1.1.10 | PATCH | Ensure noexec option set on /var/tmp partition"
   mount:
       name: /var/tmp
-      src: "{{ ubuntu1804cis_vartmp['source'] }}"
+      src: "{{ ubuntu2204cis_vartmp['source'] }}"
       state: mounted
-      fstype: "{{ ubuntu1804cis_vartmp['fstype'] }}"
-      opts: "{{ ubuntu1804cis_vartmp['opts'] }}"
+      fstype: "{{ ubuntu2204cis_vartmp['fstype'] }}"
+      opts: "{{ ubuntu2204cis_vartmp['opts'] }}"
   when:
-      - ubuntu1804cis_vartmp['enabled'] == 'yes'
-      - ubuntu1804cis_rule_1_1_8
-      - ubuntu1804cis_rule_1_1_9
-      - ubuntu1804cis_rule_1_1_10
+      - ubuntu2204cis_vartmp['enabled'] == 'yes'
+      - ubuntu2204cis_rule_1_1_8
+      - ubuntu2204cis_rule_1_1_9
+      - ubuntu2204cis_rule_1_1_10
   tags:
       - level1
       - scored
@@ -396,7 +396,7 @@
   changed_when: false
   failed_when: false
   when:
-      - ubuntu1804cis_rule_1_1_11
+      - ubuntu2204cis_rule_1_1_11
   tags:
       - level2
       - scored
@@ -410,7 +410,7 @@
   changed_when: false
   failed_when: false
   when:
-      - ubuntu1804cis_rule_1_1_12
+      - ubuntu2204cis_rule_1_1_12
   tags:
       - level2
       - scored
@@ -424,7 +424,7 @@
   changed_when: false
   failed_when: false
   when:
-      - ubuntu1804cis_rule_1_1_13
+      - ubuntu2204cis_rule_1_1_13
   tags:
       - level2
       - scored
@@ -440,7 +440,7 @@
       fstype: "{{ item.fstype }}"
       opts: "nodev"
   when:
-      - ubuntu1804cis_rule_1_1_14
+      - ubuntu2204cis_rule_1_1_14
       - item.mount == "/home"
   with_items:
       - "{{ ansible_mounts }}"
@@ -461,9 +461,9 @@
       fstype: tmpfs
       opts: "defaults,nodev,nosuid,noexec"
   when:
-      - ubuntu1804cis_rule_1_1_15
-      - ubuntu1804cis_rule_1_1_16
-      - ubuntu1804cis_rule_1_1_17
+      - ubuntu2204cis_rule_1_1_15
+      - ubuntu2204cis_rule_1_1_16
+      - ubuntu2204cis_rule_1_1_17
   tags:
       - level1
       - scored
@@ -476,7 +476,7 @@
   command: /bin/true
   changed_when: false
   when:
-      - ubuntu1804cis_rule_1_1_18
+      - ubuntu2204cis_rule_1_1_18
   tags:
       - level1
       - notscored
@@ -488,7 +488,7 @@
   command: /bin/true
   changed_when: false
   when:
-      - ubuntu1804cis_rule_1_1_19
+      - ubuntu2204cis_rule_1_1_19
   tags:
       - level1
       - notscored
@@ -500,7 +500,7 @@
   command: /bin/true
   changed_when: false
   when:
-      - ubuntu1804cis_rule_1_1_20
+      - ubuntu2204cis_rule_1_1_20
   tags:
       - level1
       - notscored
@@ -517,7 +517,7 @@
   changed_when: false
   failed_when: false
   when:
-      - ubuntu1804cis_rule_1_1_21
+      - ubuntu2204cis_rule_1_1_21
       # - sticky_bit_on_worldwritable_dirs_audit.rc == '0'
   tags:
       - level1
@@ -530,9 +530,9 @@
       name: autofs
       enabled: false
   when:
-      - not ubuntu1804cis_allow_autofs
+      - not ubuntu2204cis_allow_autofs
       - autofs_service_status.stdout == "loaded"
-      - ubuntu1804cis_rule_1_1_22
+      - ubuntu2204cis_rule_1_1_22
   tags:
       - level1
       - scored
@@ -547,7 +547,7 @@
       state: present
       create: true
   when:
-      - ubuntu1804cis_rule_1_1_23
+      - ubuntu2204cis_rule_1_1_23
   tags:
       - level1
       - scored
@@ -561,8 +561,8 @@
       name: usb-storage
       state: absent
   when:
-      - ubuntu1804cis_rule_1_1_23
-      - not ubuntu1804cis_skip_for_travis
+      - ubuntu2204cis_rule_1_1_23
+      - not ubuntu2204cis_skip_for_travis
   tags:
       - level1
       - scored
@@ -575,7 +575,7 @@
   command: /bin/true
   changed_when: false
   when:
-      - ubuntu1804cis_rule_1_2_1
+      - ubuntu2204cis_rule_1_2_1
   tags:
       - level1
       - notscored
@@ -586,7 +586,7 @@
   command: /bin/true
   changed_when: false
   when:
-      - ubuntu1804cis_rule_1_2_2
+      - ubuntu2204cis_rule_1_2_2
   tags:
       - level1
       - notscored
@@ -601,7 +601,7 @@
       state: present
       install_recommends: false
   when:
-      - ubuntu1804cis_rule_1_3_1
+      - ubuntu2204cis_rule_1_3_1
   tags:
       - level1
       - scored
@@ -617,7 +617,7 @@
     line: 'Defaults use_pty'
     validate: 'visudo -cf %s'
   when:
-      - ubuntu1804cis_rule_1_3_2
+      - ubuntu2204cis_rule_1_3_2
   tags:
       - level1
       - scored
@@ -633,7 +633,7 @@
     line: 'Defaults logfile="/var/log/sudo.log"'
     validate: 'visudo -cf %s'
   when:
-      - ubuntu1804cis_rule_1_3_3
+      - ubuntu2204cis_rule_1_3_3
   tags:
       - level1
       - scored
@@ -648,7 +648,7 @@
       state: present
       install_recommends: false
   when:
-      - ubuntu1804cis_rule_1_4_1
+      - ubuntu2204cis_rule_1_4_1
       - not postfix_installed.rc == 0
   tags:
       - level1
@@ -665,7 +665,7 @@
       state: present
       install_recommends: false
   when:
-      - ubuntu1804cis_rule_1_4_1
+      - ubuntu2204cis_rule_1_4_1
   tags:
       - level1
       - scored
@@ -688,10 +688,10 @@
   args:
       creates: /var/lib/aide/aide.db
   when:
-      - ubuntu1804cis_config_aide
-      - ubuntu1804cis_rule_1_4_1
+      - ubuntu2204cis_config_aide
+      - ubuntu2204cis_rule_1_4_1
       - not aide_db.stat.exists
-      - not ubuntu1804cis_skip_for_travis
+      - not ubuntu2204cis_skip_for_travis
   tags:
       - level1
       - scored
@@ -702,16 +702,16 @@
 - name: "SCORED | 1.4.2 | PATCH | Ensure filesystem integrity is regularly checked"
   cron:
       name: Run AIDE integrity check weekly
-      cron_file: "{{ ubuntu1804cis_aide_cron['cron_file'] }}"
-      user: "{{ ubuntu1804cis_aide_cron['cron_user'] }}"
-      minute: "{{ ubuntu1804cis_aide_cron['aide_minute'] | default('0') }}"
-      hour: "{{ ubuntu1804cis_aide_cron['aide_hour'] | default('5') }}"
-      day: "{{ ubuntu1804cis_aide_cron['aide_day'] | default('*') }}"
-      month: "{{ ubuntu1804cis_aide_cron['aide_month'] | default('*') }}"
-      weekday: "{{ ubuntu1804cis_aide_cron['aide_weekday'] | default('*') }}"
-      job: "{{ ubuntu1804cis_aide_cron['aide_job'] }}"
+      cron_file: "{{ ubuntu2204cis_aide_cron['cron_file'] }}"
+      user: "{{ ubuntu2204cis_aide_cron['cron_user'] }}"
+      minute: "{{ ubuntu2204cis_aide_cron['aide_minute'] | default('0') }}"
+      hour: "{{ ubuntu2204cis_aide_cron['aide_hour'] | default('5') }}"
+      day: "{{ ubuntu2204cis_aide_cron['aide_day'] | default('*') }}"
+      month: "{{ ubuntu2204cis_aide_cron['aide_month'] | default('*') }}"
+      weekday: "{{ ubuntu2204cis_aide_cron['aide_weekday'] | default('*') }}"
+      job: "{{ ubuntu2204cis_aide_cron['aide_job'] }}"
   when:
-      - ubuntu1804cis_rule_1_4_2
+      - ubuntu2204cis_rule_1_4_2
   tags:
       - level1
       - scored
@@ -728,7 +728,7 @@
       mode: 0400
   when:
       - ansible_os_family == "Debian"
-      - ubuntu1804cis_rule_1_5_1
+      - ubuntu2204cis_rule_1_5_1
   tags:
       - level1
       - scored
@@ -744,7 +744,7 @@
       mode: 0400
   when:
       - ansible_os_family == "Debian"
-      - ubuntu1804cis_rule_1_5_1
+      - ubuntu2204cis_rule_1_5_1
       - grub_conf.stat.exists
   tags:
       - level1
@@ -761,7 +761,7 @@
       mode: 0400
   when:
       - ansible_os_family == "Debian"
-      - ubuntu1804cis_rule_1_5_1
+      - ubuntu2204cis_rule_1_5_1
       - menu_lst.stat.exists
   tags:
       - level1
@@ -772,16 +772,16 @@
 
 - name: "SCORED | 1.5.2 | PATCH | Ensure bootloader password is set - generate password"
   shell: "set -o pipefail;
-        if [ '{{ ubuntu1804cis_bootloader_password }}' == 'random' ];
-        then PASSWORD=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c12); else PASSWORD='{{ ubuntu1804cis_bootloader_password }}';
+        if [ '{{ ubuntu2204cis_bootloader_password }}' == 'random' ];
+        then PASSWORD=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c12); else PASSWORD='{{ ubuntu2204cis_bootloader_password }}';
         fi;
         echo -e \"$PASSWORD\n$PASSWORD\" | grub-mkpasswd-pbkdf2 | awk '/grub.pbkdf/{print$NF}'"
   register: grub_pass
   args:
       executable: /bin/bash
   when:
-      - ubuntu1804cis_set_boot_pass
-      - ubuntu1804cis_rule_1_5_2
+      - ubuntu2204cis_set_boot_pass
+      - ubuntu2204cis_rule_1_5_2
   tags:
       - level1
       - scored
@@ -799,8 +799,8 @@
       mode: 0755
   notify: generate new grub config
   when:
-      - ubuntu1804cis_set_boot_pass and grub_pass is defined and grub_pass.stdout is defined and grub_pass.stdout | length >0
-      - ubuntu1804cis_rule_1_5_2
+      - ubuntu2204cis_set_boot_pass and grub_pass is defined and grub_pass.stdout is defined and grub_pass.stdout | length >0
+      - ubuntu2204cis_rule_1_5_2
   tags:
       - level1
       - scored
@@ -815,9 +815,9 @@
       replace: '--class os --unrestricted"'
   notify: generate new grub config
   when:
-      - ubuntu1804cis_set_boot_pass
-      - ubuntu1804cis_rule_1_5_2
-      - ubuntu1804cis_rule_1_5_2_disable_password
+      - ubuntu2204cis_set_boot_pass
+      - ubuntu2204cis_rule_1_5_2
+      - ubuntu2204cis_rule_1_5_2_disable_password
   tags:
       - level1
       - scored
@@ -827,14 +827,14 @@
 
 - name: "SCORED | 1.5.3 | PATCH | Ensure authentication required for single user mode"
   shell: "set -o pipefail;
-          if [ '{{ ubuntu1804cis_root_password }}' == 'random' ];
-          then PASSWORD=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c24); else PASSWORD='{{ ubuntu1804cis_root_password }}';
+          if [ '{{ ubuntu2204cis_root_password }}' == 'random' ];
+          then PASSWORD=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c24); else PASSWORD='{{ ubuntu2204cis_root_password }}';
           fi;
           echo \"root:$PASSWORD\" | chpasswd"
   args:
       executable: /bin/bash
   when:
-      - ubuntu1804cis_rule_1_5_3
+      - ubuntu2204cis_rule_1_5_3
       - current_root_password.stdout | length > 0
   tags:
       - level1
@@ -847,7 +847,7 @@
   command: /bin/true
   changed_when: false
   when:
-      - ubuntu1804cis_rule_1_5_4
+      - ubuntu2204cis_rule_1_5_4
   tags:
       - level1
       - notscored
@@ -863,8 +863,8 @@
       executable: /bin/bash
   changed_when: false
   when:
-      - ubuntu1804cis_rule_1_6_1
-      - not ubuntu1804cis_skip_for_travis
+      - ubuntu2204cis_rule_1_6_1
+      - not ubuntu2204cis_skip_for_travis
   tags:
       - level1
       - scored
@@ -880,7 +880,7 @@
       sysctl_set: true
       ignoreerrors: true
   when:
-      - ubuntu1804cis_rule_1_6_2
+      - ubuntu2204cis_rule_1_6_2
   tags:
       - level1
       - scored
@@ -892,7 +892,7 @@
   command: prelink -ua
   when:
       - prelink_installed.rc == 0
-      - ubuntu1804cis_rule_1_6_3
+      - ubuntu2204cis_rule_1_6_3
   tags:
       - level1
       - scored
@@ -904,7 +904,7 @@
       name: prelink
       state: absent
   when:
-      - ubuntu1804cis_rule_1_6_3
+      - ubuntu2204cis_rule_1_6_3
   tags:
       - level1
       - scored
@@ -920,7 +920,7 @@
       sysctl_set: true
       ignoreerrors: true
   when:
-      - ubuntu1804cis_rule_1_6_4
+      - ubuntu2204cis_rule_1_6_4
   tags:
       - level1
       - scored
@@ -934,7 +934,7 @@
     state: present
   notify: restart systemd-coredump
   when:
-      - ubuntu1804cis_rule_1_6_4
+      - ubuntu2204cis_rule_1_6_4
   tags:
       - level1
       - scored
@@ -951,7 +951,7 @@
     insertbefore: "# End of file"
   notify: restart systemd-coredump
   when:
-      - ubuntu1804cis_rule_1_6_4
+      - ubuntu2204cis_rule_1_6_4
   tags:
       - level1
       - scored
@@ -966,7 +966,7 @@
    - apparmor
    - apparmor-utils
   when:
-      - ubuntu1804cis_rule_1_7_1_1
+      - ubuntu2204cis_rule_1_7_1_1
   tags:
       - level1
       - scored
@@ -991,7 +991,7 @@
         notify:
             - generate new grub config
   when:
-      - ubuntu1804cis_rule_1_7_1_2
+      - ubuntu2204cis_rule_1_7_1_2
   tags:
       - level1
       - scored
@@ -1002,7 +1002,7 @@
   command: /bin/true
   changed_when: false
   when:
-      - ubuntu1804cis_rule_1_7_1_3
+      - ubuntu2204cis_rule_1_7_1_3
   tags:
       - level1
       - scored
@@ -1014,7 +1014,7 @@
   command: /bin/true
   changed_when: false
   when:
-      - ubuntu1804cis_rule_1_7_1_4
+      - ubuntu2204cis_rule_1_7_1_4
   tags:
       - level1
       - scored
@@ -1027,7 +1027,7 @@
       src: etc/motd.j2
       dest: /etc/motd
   when:
-      - ubuntu1804cis_rule_1_8_1_1
+      - ubuntu2204cis_rule_1_8_1_1
   tags:
       - level1
       - scored
@@ -1040,7 +1040,7 @@
       src: etc/issue.j2
       dest: /etc/issue
   when:
-      - ubuntu1804cis_rule_1_8_1_2
+      - ubuntu2204cis_rule_1_8_1_2
   tags:
       - level1
       - scored
@@ -1053,7 +1053,7 @@
       src: etc/issue.net.j2
       dest: /etc/issue.net
   when:
-      - ubuntu1804cis_rule_1_8_1_3
+      - ubuntu2204cis_rule_1_8_1_3
   tags:
       - level1
       - scored
@@ -1069,7 +1069,7 @@
       group: root
       mode: 0644
   when:
-      - ubuntu1804cis_rule_1_8_1_4
+      - ubuntu2204cis_rule_1_8_1_4
   tags:
       - level1
       - scored
@@ -1085,7 +1085,7 @@
       group: root
       mode: 0644
   when:
-      - ubuntu1804cis_rule_1_8_1_5
+      - ubuntu2204cis_rule_1_8_1_5
   tags:
       - level1
       - scored
@@ -1101,7 +1101,7 @@
       group: root
       mode: 0644
   when:
-      - ubuntu1804cis_rule_1_8_1_6
+      - ubuntu2204cis_rule_1_8_1_6
   tags:
       - level1
       - scored
@@ -1125,10 +1125,10 @@
       - { file: '/etc/dconf/profile/gdm', regexp: 'file-db', line: 'file-db:/usr/share/gdm/greeter-dconf-defaults' }
       - { file: '/etc/dconf/db/gdm.d/01-banner-message', regexp: '\[org\/gnome\/login-screen\]', line: '[org/gnome/login-screen]' }
       - { file: '/etc/dconf/db/gdm.d/01-banner-message', regexp: 'banner-message-enable', line: 'banner-message-enable=true' }
-      - { file: '/etc/dconf/db/gdm.d/01-banner-message', regexp: 'banner-message-text', line: "banner-message-text='{{ ubuntu1804cis_warning_banner }}' " }
+      - { file: '/etc/dconf/db/gdm.d/01-banner-message', regexp: 'banner-message-text', line: "banner-message-text='{{ ubuntu2204cis_warning_banner }}' " }
   when:
-      - ubuntu1804cis_gui
-      - ubuntu1804cis_rule_1_8_2
+      - ubuntu2204cis_gui
+      - ubuntu2204cis_rule_1_8_2
   tags:
       - level1
       - scored
@@ -1140,7 +1140,7 @@
   apt:
       upgrade: dist
   when:
-      - ubuntu1804cis_apply_upgrades
+      - ubuntu2204cis_apply_upgrades
   tags:
       - level1
       - notscored

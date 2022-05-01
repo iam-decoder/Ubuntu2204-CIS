@@ -1,10 +1,10 @@
-Ubuntu 18.04 CIS STIG
+Ubuntu 22.04 CIS STIG
 ================
 
-[![Build Status](https://travis-ci.com/florianutz/Ubuntu1804-CIS.svg?branch=master)](https://travis-ci.com/florianutz/Ubuntu1804-CIS)
-[![Ansible Role](https://img.shields.io/badge/role-florianutz.Ubuntu1804--CIS-blue.svg)](https://galaxy.ansible.com/florianutz/Ubuntu1804-CIS/)
+[![Build Status](https://travis-ci.com/florianutz/Ubuntu2204-CIS.svg?branch=master)](https://travis-ci.com/florianutz/Ubuntu2204-CIS)
+[![Ansible Role](https://img.shields.io/badge/role-florianutz.Ubuntu2204--CIS-blue.svg)](https://galaxy.ansible.com/florianutz/Ubuntu2204-CIS/)
 
-Configure Ubuntu 18.04 machine to be CIS compliant. Level 1 and 2 findings will be corrected by default.
+Configure Ubuntu 22.04 machine to be CIS compliant. Level 1 and 2 findings will be corrected by default.
 
 This role **will make changes to the system** that could break things. This is not an auditing tool but rather a remediation tool to be used after an audit has been conducted.
 
@@ -17,7 +17,7 @@ If you want to install this via the `ansible-galaxy` command you'll need to run 
 With this in the file requirements.yml:
 
 ```
-- src: https://github.com/florianutz/Ubuntu1804-CIS.git
+- src: https://github.com/florianutz/Ubuntu2204-CIS.git
 ```
 
 Based on [CIS Ubuntu Benchmark v2.0.1 - 01-03-2020 ](https://www.cisecurity.org/cis-benchmarks/).
@@ -33,73 +33,73 @@ Role Variables
 --------------
 There are many role variables defined in defaults/main.yml. This list shows the most important.
 
-**ubuntu1804cis_notauto**: Run CIS checks that we typically do NOT want to automate due to the high probability of breaking the system (Default: false)
+**ubuntu2204cis_notauto**: Run CIS checks that we typically do NOT want to automate due to the high probability of breaking the system (Default: false)
 
-**ubuntu1804cis_section1**: CIS - General Settings (Section 1) (Default: true)
+**ubuntu2204cis_section1**: CIS - General Settings (Section 1) (Default: true)
 
-**ubuntu1804cis_section2**: CIS - Services settings (Section 2) (Default: true)
+**ubuntu2204cis_section2**: CIS - Services settings (Section 2) (Default: true)
 
-**ubuntu1804cis_section3**: CIS - Network settings (Section 3) (Default: true)
+**ubuntu2204cis_section3**: CIS - Network settings (Section 3) (Default: true)
 
-**ubuntu1804cis_section4**: CIS - Logging and Auditing settings (Section 4) (Default: true)
+**ubuntu2204cis_section4**: CIS - Logging and Auditing settings (Section 4) (Default: true)
 
-**ubuntu1804cis_section5**: CIS - Access, Authentication and Authorization settings (Section 5) (Default: true)
+**ubuntu2204cis_section5**: CIS - Access, Authentication and Authorization settings (Section 5) (Default: true)
 
-**ubuntu1804cis_section6**: CIS - System Maintenance settings (Section 6) (Default: true)  
+**ubuntu2204cis_section6**: CIS - System Maintenance settings (Section 6) (Default: true)  
 
 ##### Disable all selinux functions
-`ubuntu1804cis_selinux_disable: false`
+`ubuntu2204cis_selinux_disable: false`
 
 ##### Service variables:
 ###### These control whether a server should or should not be allowed to continue to run these services
 
 ```
-ubuntu1804cis_avahi_server: false  
-ubuntu1804cis_cups_server: false  
-ubuntu1804cis_dhcp_server: false  
-ubuntu1804cis_ldap_server: false  
-ubuntu1804cis_telnet_server: false  
-ubuntu1804cis_nfs_server: false  
-ubuntu1804cis_rpc_server: false  
-ubuntu1804cis_ntalk_server: false  
-ubuntu1804cis_rsyncd_server: false  
-ubuntu1804cis_tftp_server: false  
-ubuntu1804cis_rsh_server: false  
-ubuntu1804cis_nis_server: false  
-ubuntu1804cis_snmp_server: false  
-ubuntu1804cis_squid_server: false  
-ubuntu1804cis_smb_server: false  
-ubuntu1804cis_dovecot_server: false  
-ubuntu1804cis_httpd_server: false  
-ubuntu1804cis_vsftpd_server: false  
-ubuntu1804cis_named_server: false  
-ubuntu1804cis_bind: false  
-ubuntu1804cis_vsftpd: false  
-ubuntu1804cis_httpd: false  
-ubuntu1804cis_dovecot: false  
-ubuntu1804cis_samba: false  
-ubuntu1804cis_squid: false  
-ubuntu1804cis_net_snmp: false  
+ubuntu2204cis_avahi_server: false  
+ubuntu2204cis_cups_server: false  
+ubuntu2204cis_dhcp_server: false  
+ubuntu2204cis_ldap_server: false  
+ubuntu2204cis_telnet_server: false  
+ubuntu2204cis_nfs_server: false  
+ubuntu2204cis_rpc_server: false  
+ubuntu2204cis_ntalk_server: false  
+ubuntu2204cis_rsyncd_server: false  
+ubuntu2204cis_tftp_server: false  
+ubuntu2204cis_rsh_server: false  
+ubuntu2204cis_nis_server: false  
+ubuntu2204cis_snmp_server: false  
+ubuntu2204cis_squid_server: false  
+ubuntu2204cis_smb_server: false  
+ubuntu2204cis_dovecot_server: false  
+ubuntu2204cis_httpd_server: false  
+ubuntu2204cis_vsftpd_server: false  
+ubuntu2204cis_named_server: false  
+ubuntu2204cis_bind: false  
+ubuntu2204cis_vsftpd: false  
+ubuntu2204cis_httpd: false  
+ubuntu2204cis_dovecot: false  
+ubuntu2204cis_samba: false  
+ubuntu2204cis_squid: false  
+ubuntu2204cis_net_snmp: false  
 ```  
 
 ##### Designate server as a Mail server
-`ubuntu1804cis_is_mail_server: false`
+`ubuntu2204cis_is_mail_server: false`
 
 
 ##### System network parameters (host only OR host and router)
-`ubuntu1804cis_is_router: false`  
+`ubuntu2204cis_is_router: false`  
 
 
 ##### IPv6 required
-`ubuntu1804cis_ipv6_required: true`  
+`ubuntu2204cis_ipv6_required: true`  
 
 
 ##### AIDE
-`ubuntu1804cis_config_aide: true`
+`ubuntu2204cis_config_aide: true`
 
 ###### AIDE cron settings
 ```
-ubuntu1804cis_aide_cron:
+ubuntu2204cis_aide_cron:
   cron_user: root
   cron_file: /etc/crontab
   aide_job: '/usr/sbin/aide --check'
@@ -112,24 +112,24 @@ ubuntu1804cis_aide_cron:
 
 
 ##### Set to 'true' if X Windows is needed in your environment
-`ubuntu1804cis_xwindows_required: no`
+`ubuntu2204cis_xwindows_required: no`
 
 
 ##### Client application requirements
 ```
-ubuntu1804cis_openldap_clients_required: false
-ubuntu1804cis_telnet_required: false
-ubuntu1804cis_talk_required: false  
-ubuntu1804cis_rsh_required: false
-ubuntu1804cis_ypbind_required: false
+ubuntu2204cis_openldap_clients_required: false
+ubuntu2204cis_telnet_required: false
+ubuntu2204cis_talk_required: false  
+ubuntu2204cis_rsh_required: false
+ubuntu2204cis_ypbind_required: false
 ```
 
 ##### Time Synchronization
 ```
-ubuntu1804cis_time_synchronization: chrony
-ubuntu1804cis_time_Synchronization: ntp
+ubuntu2204cis_time_synchronization: chrony
+ubuntu2204cis_time_Synchronization: ntp
 
-ubuntu1804cis_time_synchronization_servers:
+ubuntu2204cis_time_synchronization_servers:
   - uri: "0.pool.ntp.org"
     config: "minpoll 8"
   - uri: "1.pool.ntp.org"
@@ -148,29 +148,29 @@ It is not implemented, noexec for /tmp will disrupt apt. /tmp contains executabl
 ##### 1.5.3 | PATCH | Ensure authentication required for single user mode
 It is disabled by default as it is setting random password for root. To enable it set:
 ```yaml
-ubuntu1804cis_rule_1_5_3: true
+ubuntu2204cis_rule_1_5_3: true
 ```
 To use other than random password:
 ```yaml
-ubuntu1804cis_root_password: 'new password'
+ubuntu2204cis_root_password: 'new password'
 ```
 
 ##### 3.4.2 | PATCH | Ensure /etc/hosts.allow is configured
 ```
-ubuntu1804cis_host_allow:
+ubuntu2204cis_host_allow:
   - "10.0.0.0/255.0.0.0"  
   - "172.16.0.0/255.240.0.0"  
   - "192.168.0.0/255.255.0.0"    
 ```  
 
 ```
-ubuntu1804cis_firewall: firewalld
-ubuntu1804cis_firewall: iptables
+ubuntu2204cis_firewall: firewalld
+ubuntu2204cis_firewall: iptables
 ```
 
 ##### 5.3.1 | PATCH | Ensure password creation requirements are configured
 ```
-ubuntu1804cis_pwquality:
+ubuntu2204cis_pwquality:
   - key: 'minlen'
     value: '14'
   - key: 'dcredit'
@@ -198,11 +198,11 @@ Example Playbook
   become: yes
 
   roles:
-    - Ubuntu1804-CIS
+    - Ubuntu2204-CIS
 ```
 
 To run the tasks in this repository, first create this file one level above the repository
-(i.e. the playbook .yml and the directory `Ubuntu1804-CIS` should be next to each other),
+(i.e. the playbook .yml and the directory `Ubuntu2204-CIS` should be next to each other),
 then review the file `defaults/main.yml` and disable any rule/section you do not wish to execute.
 
 Assuming you named the file `site.yml`, run it with:

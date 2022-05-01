@@ -8,7 +8,7 @@ lint: |
   ansible-lint -c .ansible-lint
 platforms:
   - name: instance
-    image: florianutz/docker-systemd:18.04
+    image: florianutz/docker-systemd:22.04
     command: /lib/systemd/systemd
     tmpfs:
       - /run
